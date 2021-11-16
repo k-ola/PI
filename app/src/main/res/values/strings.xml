@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">W bunkry!</string>
+    <string name="name_text">W bunkry!</string>
+    <string name="desc_text">Edycja:\nRejon Umocniony Hel</string>
+    <string name="history_button">Historia</string>
+    <string name="pathways_button">Trasy</string>
+    <string name="exit_button">Wyjdź</string>
+    <string name="pathways_text">Wybierz trasę</string>
+    <string name="shortPathway_button">Krótka</string>
+    <string name="midPathway_button">Średnia</string>
+    <string name="longPathway_button">Długa</string>
+    <string name="history_text">Historia</string>
+    <string name="fullHistory_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.
+Sed sem purus, vestibulum ac libero quis, vulputate sagittis arcu. Duis consequat auctor odio vestibulum efficitur. Aenean eget rhoncus ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum congue nulla id est dignissim sollicitudin. Praesent dui neque, tincidunt eu molestie vitae, scelerisque eu nibh. Vestibulum cursus lectus ut nulla commodo, vel congue erat luctus. Vestibulum convallis sagittis laoreet. Donec dictum sagittis ullamcorper. Cras sit amet dictum nibh, non fringilla nunc. Sed aliquet iaculis sem, in tempor quam facilisis nec.
+
+Donec ac maximus tortor, nec vulputate augue. Donec at blandit dui. Integer id nibh ornare turpis laoreet condimentum. Nullam mattis eleifend ultricies. Aliquam erat volutpat. Nunc non leo sed risus sagittis dignissim. Vivamus blandit magna arcu, eget rhoncus felis elementum malesuada. Sed facilisis ex et efficitur aliquam. Mauris tortor sem, tincidunt sed diam mollis, pharetra efficitur nisl. Nulla luctus sapien metus, non molestie nulla ullamcorper et. Sed quis quam a sapien elementum bibendum. Fusce eleifend commodo neque, blandit ultricies dolor tincidunt eget. Aliquam eleifend ornare tellus quis blandit.
+</string>
+    <string name="title_activity_short_map">shortMapActivity</string>
+    <string name="title_activity_medium_map">MediumMapActivity</string>
+    <string name="title_activity_long_map">LongMapActivity</string>
+</resources>
