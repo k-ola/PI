@@ -9,6 +9,8 @@
     <string name="shortPathway_button">Krótka</string>
     <string name="midPathway_button">Średnia</string>
     <string name="longPathway_button">Długa</string>
+    <string name="startShort_button">Rozpocznij</string>
+    <string name="poisOnTheWay_text">Obiekty na trasie</string>
     <string name="history_text">Historia</string>
     <string name="fullHistory_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.
 
@@ -20,4 +22,7 @@ Donec ac maximus tortor, nec vulputate augue. Donec at blandit dui. Integer id n
     <string name="title_activity_short_map">shortMapActivity</string>
     <string name="title_activity_medium_map">MediumMapActivity</string>
     <string name="title_activity_long_map">LongMapActivity</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="pick_place">Choose a place</string>
 </resources>

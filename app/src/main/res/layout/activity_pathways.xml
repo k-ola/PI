@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PathwaysActivity">
+    tools:context="wbunkry.PathwaysActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -21,7 +21,7 @@
         app:srcCompat="@drawable/tlo1b" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button7"
         android:layout_width="240dp"
         android:layout_height="77dp"
         android:layout_marginStart="20dp"
@@ -101,7 +101,7 @@
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />

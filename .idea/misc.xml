@@ -8,11 +8,16 @@
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_history.xml" value="0.16482084690553747" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_long_map.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_medium_map.xml" value="0.1578125" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_pathways.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_details.xml" value="0.1578125" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_map.xml" value="0.25" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_path.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/custom_info_contents.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/custom_info_window.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/iwin_layout.xml" value="0.1609375" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/poi_row.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/single_poi.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.12291666666666666" />
       </map>
     </option>

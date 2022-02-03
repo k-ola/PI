@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wbunkry">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -12,6 +11,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
 
     <application
         android:allowBackup="true"
@@ -34,52 +35,65 @@
             android:value="${MAPS_API_KEY}" />
 
         <activity
-            android:name=".LongMapActivity"
+            android:name="com.example.wbunkry.activities.LongMapActivity"
             android:exported="false"
             android:label="Trasa długa">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".PathwaysActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wbunkry.activities.PathwaysActivity" />
         </activity>
         <activity
-            android:name=".MediumMapActivity"
+            android:name="com.example.wbunkry.activities.MediumMapActivity"
             android:exported="false"
             android:label="Trasa średnia">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PathwaysActivity" />
+                android:value="com.example.wbunkry.activities.PathwaysActivity" />
         </activity>
         <activity
-            android:name=".ShortMapActivity"
+            android:name="com.example.wbunkry.activities.ShortMapActivity"
             android:exported="false"
             android:label="Trasa krótka">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PathwaysActivity" />
+                android:value="com.example.wbunkry.activities.PathwaysActivity" />
         </activity>
         <activity
-            android:name=".ShortPathActivity"
-            android:exported="false" />
+            android:name="com.example.wbunkry.activities.ShortPathActivity"
+            android:exported="false"
+            android:label=""
+            android:parentActivityName="com.example.wbunkry.activities.ShortDetailsActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.example.wbunkry.activities.ShortDetailsActivity" />
+        </activity>>
         <activity
-            android:name=".PathwaysActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="">
+            android:name="com.example.wbunkry.activities.PathwaysActivity"
+            android:label=""
+            android:parentActivityName="com.example.wbunkry.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.wbunkry.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".HistoryActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="">
+            android:name="com.example.wbunkry.activities.HistoryActivity"
+            android:label=""
+            android:parentActivityName="com.example.wbunkry.activities.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.wbunkry.activities.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            >
+            android:name="com.example.wbunkry.activities.ShortDetailsActivity"
+            android:label="Szczegóły trasy krótkiej"
+            android:parentActivityName="com.example.wbunkry.activities.ShortMapActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wbunkry.activities.ShortMapActivity" />
+        </activity>
+        <activity
+            android:name="com.example.wbunkry.activities.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
