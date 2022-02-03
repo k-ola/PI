@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wbunkry.R
+import com.example.wbunkry.activities.ShortDetailsActivity
 import com.example.wbunkry.database.ShortPathDB
 
-class PoiAdapter(private var context: Context): RecyclerView.Adapter<PoiViewHolder>() {
-lateinit var namePoi : TextView
+class PoiAdapter(private var context: Context, private val listener: OnItemClickListener):
+    RecyclerView.Adapter<PoiAdapter.PoiViewHolder>() {
+//lateinit var namePoi : TextView
 
     override fun onCreateViewHolder(viewGrop: ViewGroup, p1: Int): PoiViewHolder {
      //create an object form .xml file
@@ -27,16 +29,29 @@ lateinit var namePoi : TextView
     }
 
     override fun onBindViewHolder(holder: PoiViewHolder, position: Int) {
+
         val namePoi = holder.itemView.findViewById<TextView>(R.id.poiName)
 
 
      return namePoi.setText(ShortPathDB.poiNameList[position])
 
     }
+    inner class PoiViewHolder(val view: View) :RecyclerView.ViewHolder(view), View.OnClickListener {
+        //val namePoi = view.findViewById(R.id.poiName) as TextView
+        init {
+            itemView.setOnClickListener(this)
+        }
 
+        override fun onClick(p0: View?) {
+            val position=adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                listener.onItemClick(position)
+            }
+        }
 
 }
+interface OnItemClickListener {
+    fun onItemClick(position: Int)
+}
 
-class PoiViewHolder(val view: View) :RecyclerView.ViewHolder(view){
-   val namePoi = view.findViewById(R.id.poiName) as TextView
 }
