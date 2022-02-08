@@ -185,7 +185,9 @@ class ShortMapActivity : AppCompatActivity(), OnMapReadyCallback, OnPolylineClic
         polygon.strokeColor = color
         color = polygon.fillColor xor 0x00ffffff
         polygon.fillColor = color
+       // val showShortDetails = Intent (this, ShortDetailsActivity::class.java).apply{}
         val showShortDetails = Intent (this, ShortDetailsActivity::class.java).apply{}
+
         startActivity(showShortDetails)
     }
 }

@@ -1,26 +1,20 @@
 package com.example.wbunkry.database
 
+import android.graphics.Point
+
 object ShortPathDB {
 
-    var poiNameList: ArrayList<String> = arrayListOf<String>(
-        "poi1",
-        "poi2",
-        "poi3")
+    val poiList: ArrayList<Pois> = arrayListOf<Pois>(
+        Pois("poi1","59.888888","18.656989","desc1"),
+        Pois("poi2","59.786700","18.569856","desc2"),
+        Pois("poi3","58.888901", "18.482521","desc3")
 
-    var poiLatList: ArrayList<String> = arrayListOf<String> (
-        "59.888888",
-        "59.786700",
-        "58.888901")
-
-    var poiLngList: ArrayList<String> = arrayListOf<String> (
-        "18.656989",
-        "18.569856",
-        "18.482521"
-            )
-
-    var poiDescList: ArrayList<String> = arrayListOf<String> (
-        "desc1",
-        "desc2",
-        "desc3"
             )
 }
+
+data class Pois(
+    val name: String,
+    val lat: String,
+    val lng: String,
+    val desc: String
+)

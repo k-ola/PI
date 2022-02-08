@@ -1,5 +1,6 @@
 package com.example.wbunkry.activities
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,13 +13,14 @@ import com.example.wbunkry.R
 import com.example.wbunkry.adapters.PoiAdapter
 import com.example.wbunkry.database.ShortPathDB
 import com.example.wbunkry.databinding.ActivityShortDetailsBinding
+import java.text.FieldPosition
 
 
 class ShortDetailsActivity : AppCompatActivity(), PoiAdapter.OnItemClickListener {
 
     private lateinit var poiAdapter : PoiAdapter
     private lateinit var recyclerView: RecyclerView
-    //private lateinit var binding: ActivityShortDetailsBinding
+
 
 
 
@@ -31,19 +33,20 @@ class ShortDetailsActivity : AppCompatActivity(), PoiAdapter.OnItemClickListener
 
         poiAdapter=PoiAdapter(applicationContext, this)
         recyclerView.adapter = poiAdapter
+
             }
 
+
+
     override fun onItemClick(
-       // item: ShortPathDB,
         position: Int) {
-        val openPoiDetails = Intent(this, SinglePoiActivity::class.java)
-       //  intent.putExtra("POINAME", item.poiNameList)
-         //intent.putExtra("POILAT", item.poiLatList)
-         //intent.putExtra("POILNG", item.poiLngList)
-        //intent.putExtra("POIDESC", item.poiDescList)
-           .apply {}
-      startActivity(openPoiDetails)
+        val openPoiDetails = Intent(this, SinglePoiActivity::class.java).apply {
+            putExtra("position", position)
+        }
+        startActivity(openPoiDetails)
     }
+
+
 
     fun openShortPath (view: View) {
         val startShortPath = Intent(this, ShortPathActivity::class.java).apply {}
