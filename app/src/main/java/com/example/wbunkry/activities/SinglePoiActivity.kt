@@ -28,15 +28,17 @@ class SinglePoiActivity : AppCompatActivity() {
         poi = ShortPathDB.poiList.get(position)
         setContentView(R.layout.single_poi)
 
+        val imgPoi = findViewById<ImageView>(R.id.imgPoi)
         val picName = poi.img
         val bitmap: Bitmap? = assetsToBitmap(picName)
         bitmap?.apply {
-           findViewById<ImageView>(R.id.imgPoi).setImageBitmap(this)
+           imgPoi.setImageBitmap(this)
+            //findViewById<ImageView>(R.id.imgPoi).setImageBitmap(this)
         }
 
 
 
-        findViewById<ImageView>(R.id.imgPoi).setImageAssets(applicationContext,picName)
+      //  findViewById<ImageView>(R.id.imgPoi).setImageAssets(applicationContext,picName)
 
 
 

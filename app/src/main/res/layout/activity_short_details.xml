@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ShortDetailsActivity">
+    tools:context=".activities.ShortDetailsActivity"
+    >
+
+
 
 
     <TextView
@@ -14,12 +17,13 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="20dp"
-        android:text="TextView"
+        android:text="@string/poisOnTheWay_text"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recView"
@@ -34,10 +38,15 @@
 
     <Button
         android:id="@+id/navigate_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:onClick="openShortPath"
+        android:layout_width="240dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/white"
+        android:alpha="0.5"
+        android:textColor="@color/black"
         android:text="@string/startShort_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

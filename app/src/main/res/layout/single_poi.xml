@@ -13,6 +13,8 @@
     tools:ignore="DuplicateIds">
 
 
+
+
     <TextView
         android:id="@+id/namePoi"
         android:layout_width="wrap_content"
@@ -21,7 +23,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="Poi name"
-        android:textAppearance="@android:style/TextAppearance.Material.Small"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,6 +77,7 @@
                 android:layout_height="300dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
