@@ -1,6 +1,7 @@
 package com.example.wbunkry.adapters
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.ColorSpace
 import android.view.LayoutInflater
 import android.view.View
@@ -36,7 +37,8 @@ class PoiAdapter(private var context: Context, private val listener: OnItemClick
     override fun onBindViewHolder(holder: PoiViewHolder, position: Int) {
         val namePoi = holder.itemView.findViewById<TextView>(R.id.poiName)
         namePoi.text=(ShortPathDB.poiList[position].name)
-
+        namePoi.setTextColor(Color.parseColor("#FFFFFF"));
+        namePoi.setTextSize(20F)
     }
 
 

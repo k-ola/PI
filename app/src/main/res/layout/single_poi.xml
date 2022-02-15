@@ -10,7 +10,8 @@
     android:visibility="visible"
     app:layout_anchorGravity="end"
     tools:context=".activities.SinglePoiActivity"
-    tools:ignore="DuplicateIds">
+    tools:ignore="DuplicateIds"
+    android:background="@drawable/tlo1b">
 
 
 
@@ -24,7 +25,10 @@
         android:layout_marginEnd="20dp"
         android:text="Poi name"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:textSize="24sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,10 +37,14 @@
         android:id="@+id/latPoi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="110dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:text="lat"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namePoi" />
@@ -45,10 +53,14 @@
         android:id="@+id/lngPoi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="140dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="20dp"
         android:text="lng"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintStart_toEndOf="@+id/latPoi"
         app:layout_constraintTop_toBottomOf="@+id/namePoi" />
@@ -68,7 +80,12 @@
             android:id="@+id/relLay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@drawable/background"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingTop="20dp"
+            >
 
 
             <ImageView
@@ -94,7 +111,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
+                android:layout_marginBottom="130dp"
                 android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/white"
+                android:paddingBottom="50dp"
                 />
        <!--         android:layout_alignParentBottom="true"
                 android:gravity="center"
