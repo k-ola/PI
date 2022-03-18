@@ -12,7 +12,7 @@ class PathwaysActivity : AppCompatActivity() {
         setContentView(R.layout.activity_pathways)
     }
     fun openShortPathway (view: View) {
-        val showShortPathway = Intent (this, ShortMapActivity::class.java).apply{}
+        val showShortPathway = Intent (this, ShortDetailsActivity::class.java).apply{}
         startActivity(showShortPathway)
     }
     fun openMediumPathway (view: View) {

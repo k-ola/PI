@@ -1,20 +1,24 @@
 package com.example.wbunkry.database
 
 import android.graphics.Point
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 object ShortPathDB {
 
     val poiList: ArrayList<Pois> = arrayListOf<Pois>(
-        Pois("ma27.png","Nazwa pierwszego obiektu","59.888888","18.656989","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.\n" +
-                "\n" +
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.\n" +
-                "Sed sem purus, vestibulum ac libero quis, vulputate sagittis arcu. Duis consequat auctor odio vestibulum efficitur. Aenean eget rhoncus ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum congue nulla id est dignissim sollicitudin. Praesent dui neque, tincidunt eu molestie vitae, scelerisque eu nibh. Vestibulum cursus lectus ut nulla commodo, vel congue erat luctus. Vestibulum convallis sagittis laoreet. Donec dictum sagittis ullamcorper. Cras sit amet dictum nibh, non fringilla nunc. Sed aliquet iaculis sem, in tempor quam facilisis nec.\n" +
-                "\n" +
-                "Donec ac maximus tortor, nec vulputate augue. Donec at blandit dui. Integer id nibh ornare turpis laoreet condimentum. Nullam mattis eleifend ultricies. Aliquam erat volutpat. Nunc non leo sed risus sagittis dignissim. Vivamus blandit magna arcu, eget rhoncus felis elementum malesuada. Sed facilisis ex et efficitur aliquam. Mauris tortor sem, tincidunt sed diam mollis, pharetra efficitur nisl. Nulla luctus sapien metus, non molestie nulla ullamcorper et. Sed quis quam a sapien elementum bibendum. Fusce eleifend commodo neque, blandit ultricies dolor tincidunt eget. Aliquam eleifend ornare tellus quis blandit.\n"),
-        Pois("tlo.jpg","Nazwa drugiego obiektu","59.786700","18.569856","desc2"),
-        Pois("tlo1b.jpg","Nazwa trzeciego obiektu","58.888901", "18.482521","desc3")
-
+        Pois("ma27.png","Bateria Artylerii Nadbrzeżnej nr 31 im. H. Laskowskiego","54.59600047857394","18.81244502857111","Jedyna polska przedwojenna, nowoczesna bateria artylerii nadbrzeżnej wybudowana w 1935 r., uzbrojona w cztery armaty Bofors kalibru 152 mm. W baterii zbudowano cztery działobitnie, magazyn amunicyjny i drewniane wieże kierowania ogniem \n" +
+                "W trakcie kampanii wrześniowej bateria pod dowództwem kpt. Zbigniewa Przybyszewskiego bohatersko wspierała obrońców oraz prowadziła skuteczne pojedynki ogniowe z okrętami niemieckimi w tym z pancernikiem „Schleswig- Holstein”. Po walkach została wcielona w skład niemieckiego systemu obrony wybrzeża pod nazwą „Schleisen”. Po zakończeniu II wojny światowej w 1948 r. na jej bazie utworzono 13 Baterie Artylerii Stałej adaptując trzy stanowiska ogniowe i schrony pomocnicze. Zniszczone wybuchem w 1946 r, skrajne prawe stanowisko ogniowe zostało zastąpione wybudowanym w 1948 r. według tego samego wzoru schronem artyleryjskim. Pozostałe przedwojenne działobitnie zostały przebudowane pod nowe armaty radzieckie. Bateria została rozformowana w 1977 r., a na jej miejscu utworzono 7 Dywizjon Artylerii Przeciwlotniczej MW. Obecnie na teren cypla można dostać się przez dawną bramę jednostki wojskowej. Na udostępnionym do zwiedzania schronie obecnego stanowiska ogniowego nr 3, przy brukowanej drodze można podziwiać armatę morską B-13 kal. 130 mm z doskonale zachowanym parasolem maskującym. Jedyne dwa ocalałe działa kał, 152,4 mm z Baterii Laskowskiego można obejrzeć w Muzeum Marynarki Wojennej w Gdyni oraz w Muzeum Wojska Polskiego w Warszawie.\n", MarkerOptions().title("Bateria nr 31 im. H. Laskowskiego").position(
+            LatLng(54.59600047857394,18.81244502857111)
+        )),
+        Pois("tlo.jpg","27. Bateria Artylerii Stałej","54.595660407136165","18.808104214431733","Powojenna polska bateria nadbrzeżna wybudowana w latach 1955-1958, uzbrojona z radzieckie działa kal. 100 mm. Miała bronić portu helskiego przed bezpośrednim atakiem z wody i powietrza oraz atakować kutry torpedowe przedzierające się w stronę portu w Gdyni. Stanowiska ogniowe były połączone podziemnym korytarzem o łącznej długości 250 m. W baterii wybudowano lekkie schrony centrali artyleryjskiej i garaże stanowiska reflek¬tora oraz ciekawą wieżę punktu kierowania ogniem. Podobnie jak w 13. BAS wykorzystano w niej obiekty po przedwojennej Baterii Laskowskiego. Bateria została rozformowana wraz z sąsiednią 13. BAS w 1977 roku. Obecnie szczególnie warte zobaczenia są stanowiska ogniowe z zachowaną radziecką armatą kalibru 100 mm typ B-34U. Roztacza się także stąd widok na Zatokę Gdańską oraz wieżę kierowania ogniem, zwaną „kurzą stopką”.", MarkerOptions().title("27. Bateria Artylerii Stałej").position(
+            LatLng(54.595660407136165,18.808104214431733)
+        )),
+        Pois("tlo1b.jpg","Bateria 7. Dywizjonu Artylerii Przeciwlotniczej Marynarki Wojennej","54.59386051124881", "18.812303111696682","Zbudowana w 1974 r. W skład baterii wchodziło 6 stanowisk ogniowych z betonowych elementów prefabrykowanych dla armat przeciwlotniczych typu S 60 kalibru 57 mm, ukrycia dla dalmierza, radaru kierowania ogniom, ciągników oraz schrony dla załogi. Dywizjon rozformowano w 1990 r.", MarkerOptions().title("Bateria 7. Dywizjonu Artylerii Przeciwlotniczej Marynarki Wojennej\n\n\n\n\n\n\n   ").position(
+            LatLng(54.59386051124881,18.812303111696682))
             )
+
+        )
 }
 
 data class Pois(
@@ -22,5 +26,6 @@ data class Pois(
     val name: String,
     val lat: String,
     val lng: String,
-    val desc: String
+    val desc: String,
+    val marker: MarkerOptions
 )

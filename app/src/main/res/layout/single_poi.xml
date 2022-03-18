@@ -33,37 +33,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/latPoi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="lat"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namePoi" />
 
-    <TextView
-        android:id="@+id/lngPoi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
-        android:text="lng"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-        android:fontFamily="sans-serif-light"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintStart_toEndOf="@+id/latPoi"
-        app:layout_constraintTop_toBottomOf="@+id/namePoi" />
 
 
     <ScrollView
@@ -73,8 +43,9 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lngPoi"
-        tools:ignore="SpeakableTextPresentCheck">
+        app:layout_constraintTop_toBottomOf="@+id/namePoi"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_marginBottom="250dp">
 
         <LinearLayout
             android:id="@+id/relLay"
@@ -117,6 +88,7 @@
                 android:fontFamily="sans-serif-light"
                 android:textColor="@color/white"
                 android:paddingBottom="50dp"
+
                 />
        <!--         android:layout_alignParentBottom="true"
                 android:gravity="center"

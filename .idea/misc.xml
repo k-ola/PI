@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.12291666666666666" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/drawable/background.xml" value="0.2703125" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/drawable/ic_launcher_background.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_history.xml" value="0.16482084690553747" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_long_map.xml" value="0.23854166666666668" />
@@ -13,6 +14,7 @@
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_details.xml" value="0.1578125" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_map.xml" value="0.25" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_short_path.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/activity_tile_overlay.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/background.xml" value="0.23854166666666668" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/custom_info_contents.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/olakr/AndroidStudioProjects/WBunkry/app/src/main/res/layout/custom_info_window.xml" value="0.23854166666666668" />

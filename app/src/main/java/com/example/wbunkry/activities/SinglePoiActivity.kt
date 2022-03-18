@@ -50,7 +50,7 @@ class SinglePoiActivity : AppCompatActivity() {
         namePoi.text=poi.name
 
             //(ShortPathDB.poiList[position].name)
-
+/*
         val latPoi = findViewById<TextView>(R.id.latPoi)
         latPoi.text=poi.lat
             //(ShortPathDB.poiList[position].lat)
@@ -58,7 +58,7 @@ class SinglePoiActivity : AppCompatActivity() {
         val lngPoi = findViewById<TextView>(R.id.lngPoi)
         lngPoi.text=poi.lng
             //(ShortPathDB.poiList[position].lng)
-
+*/
         val descPoi = findViewById<TextView>(R.id.Desc)
         descPoi.text=poi.desc
            // (ShortPathDB.poiList[position].desc)

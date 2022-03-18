@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WBunkry">
         <activity
+            android:name=".activities.TileOverlayActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NewShortDetailsActivity"
             android:exported="false" />
         <!--
