@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">W bunkry!</string>
     <string name="name_text">W bunkry!</string>
-    <string name="desc_text">Edycja:\nRejon Umocniony Hel</string>
+    <string name="desc_text">Edycja:\nHelskie fortyfikacje</string>
     <string name="history_button">Historia</string>
     <string name="pathways_button">Trasy</string>
     <string name="exit_button">Wyjdź</string>

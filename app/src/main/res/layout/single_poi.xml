@@ -55,7 +55,7 @@
             android:background="@drawable/background"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:paddingTop="20dp"
+            android:paddingTop="-70dp"
             >
 
 
