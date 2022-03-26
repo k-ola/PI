@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -49,12 +51,8 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
     // The geographical location where the device is currently located. That is, the last-known
     // location retrieved by the Fused Location Provider.
     private var lastKnownLocation: Location? = null
-    private var likelyPlaceNames: Array<String?> = arrayOfNulls(0)
-    private var likelyPlaceAddresses: Array<String?> = arrayOfNulls(0)
-    private var likelyPlaceAttributions: Array<List<*>?> = arrayOfNulls(0)
-    private var likelyPlaceLatLngs: Array<LatLng?> = arrayOfNulls(0)
-    private val PATTERN_DASH_LENGTH = 100
-    private val PATTERN_GAP_LENGTH = 50
+    private val PATTERN_DASH_LENGTH = 30
+    private val PATTERN_GAP_LENGTH = 30
     private val dot = Dot()
     private val dash = Dash(PATTERN_DASH_LENGTH.toFloat())
     private val gap = Gap(PATTERN_GAP_LENGTH.toFloat())
@@ -520,16 +518,8 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
                     .pattern(patternDashed)
 
             )
-/*
-        val batPolygon = googleMap.addPolygon(
-            PolygonOptions()
-                .clickable(true)
-                .add(
-                    bat1plot, bat2plot, bat3plot, bat4plot, bat5plot, bat6plot, bat7plot, bat8plot
-                )
-        )
-*/
 
+        //Adding circles with markers - one circle is one of the main POIs
             val batCircle = map.addCircle(
                 CircleOptions()
                     .clickable(true)
@@ -584,11 +574,6 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
 
 
 
-
-
-
-
-
     /**
      * Gets the current location of the device, and positions the map's camera.
      */
@@ -623,6 +608,9 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
             Log.e("Exception: %s", e.message, e)
         }
     }
+
+
+
 
     /**
      * Prompts the user for permission to use the device location.
@@ -665,111 +653,7 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
         updateLocationUI()
     }
 
-    /**
-     * Prompts the user to select the current place from a list of likely places, and shows the
-     * current place on the map - provided the user has granted location permission.
-     */
-    @SuppressLint("MissingPermission")
-    private fun showCurrentPlace() {
-        if (map == null) {
-            return
-        }
-        if (locationPermissionGranted) {
-            // Use fields to define the data types to return.
-            val placeFields = listOf(Place.Field.NAME, Place.Field.ADDRESS, Place.Field.LAT_LNG)
 
-            // Use the builder to create a FindCurrentPlaceRequest.
-            val request = FindCurrentPlaceRequest.newInstance(placeFields)
-
-            // Get the likely places - that is, the businesses and other points of interest that
-            // are the best match for the device's current location.
-            val placeResult = placesClient.findCurrentPlace(request)
-            placeResult.addOnCompleteListener { task ->
-                if (task.isSuccessful && task.result != null) {
-                    val likelyPlaces = task.result
-
-                    // Set the count, handling cases where less than 5 entries are returned.
-                    val count = if (likelyPlaces != null && likelyPlaces.placeLikelihoods.size < M_MAX_ENTRIES) {
-                        likelyPlaces.placeLikelihoods.size
-                    } else {
-                        M_MAX_ENTRIES
-                    }
-                    var i = 0
-                    likelyPlaceNames = arrayOfNulls(count)
-                    likelyPlaceAddresses = arrayOfNulls(count)
-                    likelyPlaceAttributions = arrayOfNulls<List<*>?>(count)
-                    likelyPlaceLatLngs = arrayOfNulls(count)
-                    for (placeLikelihood in likelyPlaces?.placeLikelihoods ?: emptyList()) {
-                        // Build a list of likely places to show the user.
-                        likelyPlaceNames[i] = placeLikelihood.place.name
-                        likelyPlaceAddresses[i] = placeLikelihood.place.address
-                        likelyPlaceAttributions[i] = placeLikelihood.place.attributions
-                        likelyPlaceLatLngs[i] = placeLikelihood.place.latLng
-                        i++
-                        if (i > count - 1) {
-                            break
-                        }
-                    }
-
-                    // Show a dialog offering the user the list of likely places, and add a
-                    // marker at the selected place.
-                    openPlacesDialog()
-                } else {
-                    Log.e(TAG, "Exception: %s", task.exception)
-                }
-            }
-        } else {
-            // The user has not granted permission.
-            Log.i(TAG, "The user did not grant location permission.")
-
-            // Add a default marker, because the user hasn't selected a place.
-            map?.addMarker(MarkerOptions()
-                .title(getString(R.string.default_info_title))
-                .position(defaultLocation)
-                .snippet(getString(R.string.default_info_snippet)))
-
-            // Prompt the user for permission.
-            getLocationPermission()
-        }
-    }
-
-    /**
-     * Displays a form allowing the user to select a place from a list of likely places.
-     */
-    private fun openPlacesDialog() {
-        // Ask the user to choose the place where they are now.
-        val listener = DialogInterface.OnClickListener { dialog, which -> // The "which" argument contains the position of the selected item.
-            val markerLatLng = likelyPlaceLatLngs[which]
-            var markerSnippet = likelyPlaceAddresses[which]
-            if (likelyPlaceAttributions[which] != null) {
-                markerSnippet = """
-                    $markerSnippet
-                    ${likelyPlaceAttributions[which]}
-                    """.trimIndent()
-            }
-
-            if (markerLatLng == null) {
-                return@OnClickListener
-            }
-
-            // Add a marker for the selected place, with an info window
-            // showing information about that place.
-            map?.addMarker(MarkerOptions()
-                .title(likelyPlaceNames[which])
-                .position(markerLatLng)
-                .snippet(markerSnippet))
-
-            // Position the map's camera at the location of the marker.
-            map?.moveCamera(CameraUpdateFactory.newLatLngZoom(markerLatLng,
-                DEFAULT_ZOOM.toFloat()))
-        }
-
-        // Display the dialog.
-        AlertDialog.Builder(this)
-            .setTitle(R.string.pick_place)
-            .setItems(likelyPlaceNames, listener)
-            .show()
-    }
 
     /**
      * Updates the map's UI settings based on whether the user has granted location permission.
@@ -805,6 +689,33 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
 
         // Used for selecting the current place.
         private const val M_MAX_ENTRIES = 5
+    }
+}
+
+class CustomInfoWindowForGoogleMap(context: Context) : GoogleMap.InfoWindowAdapter {
+
+    var mContext = context
+    var mWindow = (context as Activity).layoutInflater.inflate(com.example.wbunkry.R.layout.iwin_layout, null)
+
+    private fun renderWindowText(marker: Marker, view: View){
+
+        val tvTitle = view.findViewById<TextView>(com.example.wbunkry.R.id.title)
+        val tvSnippet = view.findViewById<TextView>(com.example.wbunkry.R.id.snippet)
+
+        tvTitle.text = marker.title
+        tvSnippet.text = marker.snippet
+
+
+    }
+
+    override fun getInfoContents(marker: Marker): View {
+        renderWindowText(marker, mWindow)
+        return mWindow
+    }
+
+    override fun getInfoWindow(marker: Marker): View? {
+        renderWindowText(marker, mWindow)
+        return mWindow
     }
 }
 

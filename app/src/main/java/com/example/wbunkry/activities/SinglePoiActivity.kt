@@ -33,35 +33,19 @@ class SinglePoiActivity : AppCompatActivity() {
         val bitmap: Bitmap? = assetsToBitmap(picName)
         bitmap?.apply {
            imgPoi.setImageBitmap(this)
-            //findViewById<ImageView>(R.id.imgPoi).setImageBitmap(this)
+
         }
 
 
 
-      //  findViewById<ImageView>(R.id.imgPoi).setImageAssets(applicationContext,picName)
 
-
-
-       /*
-       val imgPoi = findViewById<ImageView>(R.id.imgPoi)
-        imgPoi.setImageResource(R.drawable.ma27)
-*/
         val namePoi = findViewById<TextView>(R.id.namePoi)
         namePoi.text=poi.name
 
-            //(ShortPathDB.poiList[position].name)
-/*
-        val latPoi = findViewById<TextView>(R.id.latPoi)
-        latPoi.text=poi.lat
-            //(ShortPathDB.poiList[position].lat)
 
-        val lngPoi = findViewById<TextView>(R.id.lngPoi)
-        lngPoi.text=poi.lng
-            //(ShortPathDB.poiList[position].lng)
-*/
         val descPoi = findViewById<TextView>(R.id.Desc)
         descPoi.text=poi.desc
-           // (ShortPathDB.poiList[position].desc)
+
 
     }
 

@@ -15,16 +15,20 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/icon"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        >
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".activities.SinglePoiMediumActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapters.PoiAdapterMedium"
+            android:exported="false" />
         <!--
         android:theme="@style/Theme.WBunkry"
 
-        android:roundIcon="@mipmap/ic_launcher_round"-->
-
-
+        android:roundIcon="@mipmap/ic_launcher_round"
+        -->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

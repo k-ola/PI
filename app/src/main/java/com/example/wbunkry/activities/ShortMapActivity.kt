@@ -540,29 +540,4 @@ class ShortMapActivity : AppCompatActivity(), OnMapReadyCallback, OnPolylineClic
 
 
 
-class CustomInfoWindowForGoogleMap(context: Context) : GoogleMap.InfoWindowAdapter {
 
-    var mContext = context
-    var mWindow = (context as Activity).layoutInflater.inflate(com.example.wbunkry.R.layout.iwin_layout, null)
-
-    private fun renderWindowText(marker: Marker, view: View){
-
-        val tvTitle = view.findViewById<TextView>(com.example.wbunkry.R.id.title)
-        val tvSnippet = view.findViewById<TextView>(com.example.wbunkry.R.id.snippet)
-
-        tvTitle.text = marker.title
-        tvSnippet.text = marker.snippet
-
-
-    }
-
-    override fun getInfoContents(marker: Marker): View {
-        renderWindowText(marker, mWindow)
-        return mWindow
-    }
-
-    override fun getInfoWindow(marker: Marker): View? {
-        renderWindowText(marker, mWindow)
-        return mWindow
-    }
-}
