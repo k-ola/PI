@@ -17,6 +17,11 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.wbunkry.BuildConfig
 import com.example.wbunkry.R
+import com.example.wbunkry.adapters.PinAdapter
+import com.example.wbunkry.database.Legend
+import com.example.wbunkry.databinding.ActivityLongMapBinding
+import com.example.wbunkry.databinding.ActivityMediumMapBinding
+import com.example.wbunkry.databinding.ActivityShortPathBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -29,7 +34,9 @@ import com.google.android.libraries.places.api.Places
 import com.google.android.libraries.places.api.model.Place
 import com.google.android.libraries.places.api.net.FindCurrentPlaceRequest
 import com.google.android.libraries.places.api.net.PlacesClient
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.util.*
+import kotlin.collections.ArrayList
 
 class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPolylineClickListener, GoogleMap.OnCircleClickListener {
 
@@ -61,7 +68,10 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
     private val patternDotted = Arrays.asList(dot, gap)
     private val patternDashed = Arrays.asList(dash, gap)
     private val patternMixed = Arrays.asList(dot, gap, dot, dash, gap)
+    private lateinit var binding : ActivityLongMapBinding
+    private lateinit var pinArrayList: ArrayList<Legend>
 
+    private var clicked = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,8 +81,56 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
             cameraPosition = savedInstanceState.getParcelable(KEY_CAMERA_POSITION)
         }
 
+        binding = ActivityLongMapBinding.inflate(layoutInflater)
+
+
         // Retrieve the content view that renders the map.
-        setContentView(R.layout.activity_short_path)
+        //setContentView(R.layout.activity_medium_map)
+
+        setContentView(binding.root)
+
+        val iconId = intArrayOf(
+            R.drawable.sdot_full_yellow,R.drawable.vsdot_full_yellow, R.drawable.vsdot_yellow, R.drawable.vsremove_yellow,
+            R.drawable.sdot_full_blue, R.drawable.vsdot_full_blue, R.drawable.vsdot_blue, R.drawable.vsremove_blue,
+            R.drawable.sdot_full_red, R.drawable.vsdot_full_red, R.drawable.vsdot_red, R.drawable.vsremove_red,
+            R.drawable.srec_green)
+
+        val iconDescription = arrayOf(
+            "FORTYFIKACJE POLSKIE Z LAT 1920-1939",
+            "Schrony",
+            "Działobitnie",
+            "Obiekty w ruinie",
+            "FORTYFIKACJE NIEMIECKIE Z LAT 1920-1939",
+            "Schrony",
+            "Działobitnie",
+            "Obiekty w ruinie",
+            "FORTYFIKACJE POLSKIE Z LAT 1946-1977",
+            "Schrony",
+            "Działobitnie",
+            "Obiekty w ruinie",
+            "INNE OBIEKTY"
+        )
+
+        pinArrayList = ArrayList()
+
+        for( i in iconDescription.indices) {
+            val icon = Legend(iconDescription[i], iconId[i])
+            pinArrayList.add(icon)
+        }
+
+
+
+
+        val fab = findViewById<FloatingActionButton>(R.id.legendFab)
+        fab.setOnClickListener{
+            onLegendButtonClicked()
+
+
+
+        }
+
+
+
 
         // Construct a PlacesClient
         Places.initialize(applicationContext, BuildConfig.MAPS_API_KEY)
@@ -86,6 +144,22 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
             .findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(this)
 
+    }
+
+    private fun onLegendButtonClicked() {
+        setVisibility(clicked)
+        clicked = !clicked
+    }
+
+    private fun setVisibility(clicked: Boolean) {
+        binding.legendlist.adapter = PinAdapter(this, pinArrayList)
+        if(!clicked) {
+
+            binding.legendlist.visibility = View.VISIBLE
+        }
+        else{
+            binding.legendlist.visibility = View.INVISIBLE
+        }
     }
 
     /**

@@ -64,6 +64,8 @@ class MediumMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
 private lateinit var binding : ActivityMediumMapBinding
 private lateinit var pinArrayList: ArrayList<Legend>
 
+private var clicked = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Retrieve location and camera position from saved instance state.
@@ -115,7 +117,9 @@ val iconId = intArrayOf(
 
         val fab = findViewById<FloatingActionButton>(R.id.legendFab)
         fab.setOnClickListener{
-            binding.legendlist.adapter=PinAdapter(this, pinArrayList)
+            onLegendButtonClicked()
+
+
         }
 
         // Construct a PlacesClient
@@ -133,6 +137,23 @@ val iconId = intArrayOf(
 
 
     }
+
+    private fun onLegendButtonClicked() {
+        setVisibility(clicked)
+        clicked = !clicked
+    }
+
+    private fun setVisibility(clicked: Boolean) {
+        binding.legendlist.adapter = PinAdapter(this, pinArrayList)
+        if(!clicked) {
+
+            binding.legendlist.visibility = View.VISIBLE
+        }
+        else{
+            binding.legendlist.visibility = View.INVISIBLE
+        }
+    }
+
 
     /**
      * Saves the state of the map when the activity is paused.
