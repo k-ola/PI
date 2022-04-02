@@ -16,6 +16,8 @@ import com.example.wbunkry.BuildConfig
 import com.example.wbunkry.R
 import com.example.wbunkry.adapters.PinAdapter
 import com.example.wbunkry.database.Legend
+import com.example.wbunkry.database.MediumPathDB
+import com.example.wbunkry.database.ShortPathDB
 import com.example.wbunkry.databinding.ActivityMediumMapBinding
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -41,7 +43,7 @@ class MediumMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
     // The entry point to the Fused Location Provider.
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
 
-    // A default location (Sydney, Australia) and default zoom to use when location permission is
+    // A default location and default zoom to use when location permission is
     // not granted.
     private val defaultLocation = LatLng(54.596034, 18.809927)
     private var locationPermissionGranted = false
@@ -61,10 +63,30 @@ class MediumMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
     private val patternDotted = Arrays.asList(dot, gap)
     private val patternDashed = Arrays.asList(dash, gap)
     private val patternMixed = Arrays.asList(dot, gap, dot, dash, gap)
-private lateinit var binding : ActivityMediumMapBinding
-private lateinit var pinArrayList: ArrayList<Legend>
+    private lateinit var binding : ActivityMediumMapBinding
+    private lateinit var pinArrayList: ArrayList<Legend>
+    private var clicked = false
 
-private var clicked = false
+    private lateinit var batCircle: Circle
+    private lateinit var bat13Circle: Circle
+    private lateinit var bat27Circle: Circle
+    private lateinit var bat21Circle: Circle
+    private lateinit var batdywCircle: Circle
+    private lateinit var batPlotHelCircle: Circle
+    private lateinit var batRu2aCircle: Circle
+    private lateinit var batRu2bCircle: Circle
+    private lateinit var batRu2cCircle: Circle
+    private lateinit var dywWLOPCircle: Circle
+    private lateinit var mowCircle: Circle
+    private lateinit var elektrownia_RUHCircle: Circle
+    private lateinit var pktObsCircle: Circle
+    private lateinit var dunskaCircle: Circle
+    private lateinit var batPlotCircle: Circle
+    private lateinit var szwedzkaCircle: Circle
+    private lateinit var prawyPObsCircle: Circle
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -575,7 +597,7 @@ val iconId = intArrayOf(
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsrec_green))
         )
 
-
+/*
         val shortPolyline = map.addPolyline(
             PolylineOptions()
                 .clickable(true)
@@ -587,6 +609,8 @@ val iconId = intArrayOf(
                 .pattern(patternDashed)
 
         )
+        */
+
 /*
         val batPolygon = googleMap.addPolygon(
             PolygonOptions()
@@ -597,7 +621,7 @@ val iconId = intArrayOf(
         )
 */
 
-        val batCircle = map.addCircle(
+        batCircle = map.addCircle(
             CircleOptions()
                 .clickable(true)
                 .center(LatLng(54.594385, 18.812900))
@@ -610,7 +634,7 @@ val iconId = intArrayOf(
         )
 
 
-        val bat13Circle = map.addCircle(
+        bat13Circle = map.addCircle(
             CircleOptions()
                 .clickable(true)
                 .center(LatLng(54.597369, 18.811717))
@@ -621,7 +645,7 @@ val iconId = intArrayOf(
                 .fillColor(0x2133ff33)
         )
 
-        val bat27Circle = map.addCircle(
+        bat27Circle = map.addCircle(
             CircleOptions()
                 .clickable(true)
                 .center(LatLng(54.595788, 18.808734))
@@ -630,6 +654,151 @@ val iconId = intArrayOf(
                 .visible(true)
                 .strokePattern(patternDotted)
         )
+
+
+        bat21Circle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.60296, 18.82019))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        batdywCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.603829, 18.824196))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        batPlotHelCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.60504, 18.82314))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+
+
+        batRu2aCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.60978, 18.82480))
+                .radius(240.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+        batRu2bCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.61159, 18.81727))
+                .radius(150.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        batRu2cCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.61530, 18.82034))
+                .radius(80.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        dywWLOPCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.60978, 18.82480))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        mowCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.623071049816154, 18.801718467398256))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+
+
+        elektrownia_RUHCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.62688381558725, 18.789661755818205))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        pktObsCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.61476338675549, 18.82229929820359))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        dunskaCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.61758, 18.82371))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        batPlotCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.62240418981283, 18.82100400691485))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        szwedzkaCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.62262470075269, 18.820486340596105))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+        prawyPObsCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.62661376996075, 18.819393632183544))
+                .radius(60.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
 
         map.setOnPolylineClickListener(this)
         map.setOnCircleClickListener(this)
@@ -642,10 +811,78 @@ val iconId = intArrayOf(
     }
 
     override fun onCircleClick(circle: Circle) {
-        val showBatPlotDetails = Intent(this, SinglePoiActivity::class.java).apply {
-            // putExtra("position", position)
+        val showBatPlotDetails = Intent(this, MediumSinglePoiActivity::class.java).also {
+            when (circle.id) {
+                batCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_PRZECIWLOTNICZEJ.ordinal
+                )
+                bat27Circle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_STALEJ.ordinal
+                )
+                bat13Circle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_NADBRZEZNEJ.ordinal
+                )
+                bat21Circle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_21.ordinal
+                )
+                batdywCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_DYW60.ordinal
+                )
+                batPlotHelCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_PLOTHEL.ordinal
+                )
+                batRu2aCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BAT_RU2.ordinal
+                )
+                batRu2bCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BAT_RU2.ordinal
+                )
+                batRu2cCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BAT_RU2.ordinal
+                )
+                dywWLOPCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.DYW_WLOP.ordinal
+                )
+                mowCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.MUZEUM_MOW.ordinal
+                )
+                elektrownia_RUHCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.ELEKTROWNIA_RUH.ordinal
+                )
+                pktObsCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.PKT_PBS.ordinal
+                )
+                dunskaCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_DUNSKA.ordinal
+                )
+                batPlotCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BAT_PLOT.ordinal
+                )
+                szwedzkaCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BATERIA_SZWEDZKA.ordinal
+                )
+                prawyPObsCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.PRPO_3BAS.ordinal
+                )
+            }
         }
-
         startActivity(showBatPlotDetails)
     }
 
@@ -758,8 +995,8 @@ val iconId = intArrayOf(
     }
 
     companion object {
-        private val TAG = ShortPathActivity::class.java.simpleName
-        private const val DEFAULT_ZOOM = 16
+        private val TAG = MediumMapActivity::class.java.simpleName
+        private const val DEFAULT_ZOOM = 14
         private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
 
         // Keys for storing activity state.

@@ -47,13 +47,7 @@ class ShortDetailsActivity : AppCompatActivity(), PoiAdapter.OnItemClickListener
     }
 
 
-/*
-    fun openShortPath (view: View) {
-        val startShortPath = Intent(this, ShortPathActivity::class.java).apply {}
-        startActivity(startShortPath)
-    }
 
- */
 fun openShortPath (view: View) {
     val startShortPath = Intent(this, ShortPathActivity::class.java).apply {}
     startActivity(startShortPath)

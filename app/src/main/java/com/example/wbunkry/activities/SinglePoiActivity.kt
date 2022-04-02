@@ -25,14 +25,14 @@ class SinglePoiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val position = intent.getIntExtra("position", 0)
-        poi = ShortPathDB.poiList.get(position)
+        poi = ShortPathDB.poiList[position]
         setContentView(R.layout.single_poi)
 
         val imgPoi = findViewById<ImageView>(R.id.imgPoi)
         val picName = poi.img
         val bitmap: Bitmap? = assetsToBitmap(picName)
         bitmap?.apply {
-           imgPoi.setImageBitmap(this)
+            imgPoi.setImageBitmap(this)
 
         }
 

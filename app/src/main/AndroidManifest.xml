@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.wbunkry">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -19,11 +20,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".activities.SinglePoiMediumActivity"
+            android:name=".activities.LongSinglePoiActivity"
             android:exported="false" />
         <activity
-            android:name=".adapters.PoiAdapterMedium"
+            android:name=".activities.LongDetailsActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.MediumDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MediumSinglePoiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapters.MedPoiAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <!--
         android:theme="@style/Theme.WBunkry"
 

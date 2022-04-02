@@ -9,7 +9,7 @@
     android:orientation="horizontal"
     android:visibility="visible"
     app:layout_anchorGravity="end"
-    tools:context=".activities.SinglePoiActivity"
+    tools:context=".activities.MediumSinglePoiActivity"
     tools:ignore="DuplicateIds"
     android:background="@drawable/tlo1b">
 
@@ -17,7 +17,7 @@
 
 
     <TextView
-        android:id="@+id/namePoi"
+        android:id="@+id/namePoiMed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -43,12 +43,12 @@
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namePoi"
+        app:layout_constraintTop_toBottomOf="@+id/namePoiMed"
         tools:ignore="SpeakableTextPresentCheck"
         android:layout_marginBottom="250dp">
 
         <LinearLayout
-            android:id="@+id/relLay"
+            android:id="@+id/medRelLay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -60,7 +60,7 @@
 
 
             <ImageView
-                android:id="@+id/imgPoi"
+                android:id="@+id/imgPoiMed"
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_gravity="center"
@@ -71,14 +71,14 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
                 />
-          <!--   android:scaleType="fitStart"
-                tools:srcCompat="@tools:sample/backgrounds/scenic"
+            <!--   android:scaleType="fitStart"
+                  tools:srcCompat="@tools:sample/backgrounds/scenic"
 
-                />  -->
+                  />  -->
 
 
             <TextView
-                android:id="@+id/Desc"
+                android:id="@+id/DescMed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="130dp"
@@ -91,13 +91,13 @@
                 android:paddingBottom="50dp"
 
                 />
-       <!--         android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:textAlignment="center"
-                android:layout_below="@id/imgPoi"
-                android:layout_marginTop="20dp"
+            <!--         android:layout_alignParentBottom="true"
+                     android:gravity="center"
+                     android:textAlignment="center"
+                     android:layout_below="@id/imgPoi"
+                     android:layout_marginTop="20dp"
 
-                android:textColor="@color/black"  />-->
+                     android:textColor="@color/black"  />-->
         </LinearLayout>
 
     </ScrollView>

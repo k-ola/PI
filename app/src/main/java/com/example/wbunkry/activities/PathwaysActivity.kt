@@ -16,12 +16,12 @@ class PathwaysActivity : AppCompatActivity() {
         startActivity(showShortPathway)
     }
     fun openMediumPathway (view: View) {
-        val showMediumPathway = Intent (this, MediumMapActivity::class.java).apply{}
+        val showMediumPathway = Intent (this, MediumDetailsActivity::class.java).apply{}
         startActivity(showMediumPathway)
     }
 
     fun openLongPathway (view: View) {
-        val showLongPathway = Intent (this, LongMapActivity::class.java).apply{}
+        val showLongPathway = Intent (this, LongDetailsActivity::class.java).apply{}
         startActivity(showLongPathway)
     }
 }
