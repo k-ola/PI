@@ -84,7 +84,7 @@ class MediumMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnP
     private lateinit var batPlotCircle: Circle
     private lateinit var szwedzkaCircle: Circle
     private lateinit var prawyPObsCircle: Circle
-
+    private lateinit var batRu2abcCircle: Circle
 
 
 
@@ -538,56 +538,61 @@ val iconId = intArrayOf(
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red))
         )
 
-
         val bat3plot = LatLng(54.59484, 18.81298)
-        map.addMarker(
+        val bat3plotM = map.addMarker(
             MarkerOptions()
                 .position(bat3plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
         )
+        bat3plotM?.hideInfoWindow()
 
 
         val bat4plot = LatLng(54.59460, 18.81243)
-        map.addMarker(
+        val bat4plotM = map.addMarker(
             MarkerOptions()
                 .position(bat4plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
-        )
 
+        )
+        bat4plotM?.hideInfoWindow()
 
         val bat5plot = LatLng(54.59464, 18.81366)
-        map.addMarker(
+       val bat5plotM = map.addMarker(
             MarkerOptions()
                 .position(bat5plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
         )
+        bat5plotM?.hideInfoWindow()
 
         val bat6plot = LatLng(54.59423, 18.81366)
-        map.addMarker(
+        val bat6plotM = map.addMarker(
             MarkerOptions()
                 .position(bat6plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
         )
+        bat6plotM?.hideInfoWindow()
 
         val bat7plot = LatLng(54.59382, 18.81288)
-        map.addMarker(
+        val bat7plotM = map.addMarker(
             MarkerOptions()
                 .position(bat7plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
         )
+        bat7plotM?.hideInfoWindow()
 
         val bat8plot = LatLng(54.59391, 18.81218)
-        map.addMarker(
+        val bat8plotM = map.addMarker(
             MarkerOptions()
                 .position(bat8plot)
                 .title("Działobitnia")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red))
         )
+        bat8plotM?.hideInfoWindow()
 
         val lighthouse = LatLng(54.60005, 18.81286)
         map.addMarker(
@@ -597,8 +602,299 @@ val iconId = intArrayOf(
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsrec_green))
         )
 
-/*
-        val shortPolyline = map.addPolyline(
+        val plot21_magazyn = LatLng(54.603173, 18.819742)
+        map.addMarker(
+                MarkerOptions()
+                    .position(plot21_magazyn)
+                    .title("Zniszczony magazyn amunicji 21. Baterii Przeciwlotniczej")
+                    .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsremove_yellow))
+                )
+
+            val plot21_dziala = LatLng(54.602893, 18.820450 )
+        map.addMarker(
+                MarkerOptions()
+                    .position(plot21_dziala)
+                    .title("Działobitnia")
+                    .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_yellow))
+                    )
+
+            val plot21_dzialb = LatLng(54.603067, 18.820804)
+        map.addMarker(
+                MarkerOptions()
+                    .position(plot21_dzialb)
+                    .title("Działobitnia")
+                    .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_yellow))
+                    )
+
+        val dzial = LatLng(54.602831, 18.823368)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+
+        val dzial5a = LatLng(54.604087, 18.824651)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial5a)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val dzial5b = LatLng(54.603708, 18.824511)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial5b)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val dzial5c = LatLng(54.603677, 18.823556)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial5c)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val dzial5d = LatLng(54.604137, 18.823781)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial5d)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+
+        val w6 = LatLng(54.604734, 18.822644)
+        map.addMarker(
+            MarkerOptions()
+                .position(w6)
+                .title("Dawna wieża WOP")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_blue)
+                ))
+        val dzial6a = LatLng(54.605921, 18.823191)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial6a)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_blue)
+                ))
+        val dzial6b = LatLng(54.605753, 18.824071)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial6b)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_blue)
+                ))
+        val dzial6c = LatLng(54.605386, 18.824028)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial6c)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_blue)
+                ))
+        val dzial6d = LatLng(54.605237, 18.823309)
+        map.addMarker(
+            MarkerOptions()
+                .position(dzial6d)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_blue)
+                ))
+        val ws6 = LatLng(54.605579, 18.822472)
+        map.addMarker(
+            MarkerOptions()
+                .position(ws6)
+                .title("Ruiny wieżyczki strzelniczej")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsremove_blue)
+                ))
+        val pkt6 = LatLng(54.605567, 18.823438)
+        map.addMarker(
+            MarkerOptions()
+                .position(pkt6)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_blue)
+                ))
+
+        val bocianieGniazdo = LatLng(54.615754, 18.823970)
+        map.addMarker(
+            MarkerOptions()
+                .position(bocianieGniazdo)
+                .title("Bocianie  gniazdo")
+                .snippet("Przedwojenny punkt widokowy w Helu")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsrec_green)
+                ))
+
+
+        val eBRU7a1 = LatLng(54.608153, 18.825417)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7a1)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7a2 = LatLng(54.607762, 18.825320)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7a2)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7a3 = LatLng(54.608588, 18.824623)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7a3)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7a4 = LatLng(54.608085, 18.823808)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7a4)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+
+        val eBRU7abc1 = LatLng(54.611816, 18.824060)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc1)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7abc2 = LatLng(54.612027, 18.825312)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc2)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
+                ))
+        val eBRU7abc3 = LatLng(54.611866, 18.825194)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc3)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7abc4 = LatLng(54.612711, 18.825408)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc4)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
+                ))
+        val eBRU7abc5 = LatLng(54.613077, 18.823262)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc5)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7abc6 = LatLng(54.613282, 18.823048)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc6)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
+                ))
+        val eBRU7abc7 = LatLng(54.613643, 18.823273)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc7)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7abc8 = LatLng(54.613848, 18.823230)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7abc8)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+
+        val eBRU7c1 = LatLng(54.614999, 18.821638)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c1)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
+                ))
+        val eBRU7c2 = LatLng(54.615110, 18.821382)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c2)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c3 = LatLng(54.615487, 18.821319)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c3)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c4 = LatLng(54.615634, 18.820260)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c4)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c5 = LatLng(54.615590, 18.820055)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c5)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c6 = LatLng(54.615753, 18.819877)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c6)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c7 = LatLng(54.615923, 18.819762)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c7)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c8 = LatLng(54.61535, 18.82009)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c8)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c9 = LatLng(54.615080, 18.820106)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c9)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c10 = LatLng(54.615088, 18.820681)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c10)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+        val eBRU7c11 = LatLng(54.615088, 18.820681)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c11)
+                .title("Schron")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
+                ))
+        val eBRU7c12 = LatLng(54.614873, 18.820323)
+        map.addMarker(
+            MarkerOptions()
+                .position(eBRU7c12)
+                .title("Działobitnia")
+                .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_red)
+                ))
+
+        val mediumPolyline = map.addPolyline(
             PolylineOptions()
                 .clickable(true)
                 .add(
@@ -609,7 +905,7 @@ val iconId = intArrayOf(
                 .pattern(patternDashed)
 
         )
-        */
+
 
 /*
         val batPolygon = googleMap.addPolygon(
@@ -659,7 +955,7 @@ val iconId = intArrayOf(
         bat21Circle = map.addCircle(
             CircleOptions()
                 .clickable(true)
-                .center(LatLng(54.60296, 18.82019))
+                .center(LatLng(54.603105, 18.820182))
                 .radius(60.0)
                 .fillColor(0x2133ff33)
                 .visible(true)
@@ -679,8 +975,8 @@ val iconId = intArrayOf(
         batPlotHelCircle = map.addCircle(
             CircleOptions()
                 .clickable(true)
-                .center(LatLng(54.60504, 18.82314))
-                .radius(60.0)
+                .center(LatLng(54.605318, 18.823223))
+                .radius(100.0)
                 .fillColor(0x2133ff33)
                 .visible(true)
                 .strokePattern(patternDotted)
@@ -688,10 +984,21 @@ val iconId = intArrayOf(
 
 
 
+        batRu2abcCircle = map.addCircle(
+            CircleOptions()
+                .clickable(true)
+                .center(LatLng(54.612865, 18.823511))
+                .radius(160.0)
+                .fillColor(0x2133ff33)
+                .visible(true)
+                .strokePattern(patternDotted)
+        )
+
+
         batRu2aCircle = map.addCircle(
             CircleOptions()
                 .clickable(true)
-                .center(LatLng(54.60978, 18.82480))
+                .center(LatLng(54.608656, 18.824258))
                 .radius(240.0)
                 .fillColor(0x2133ff33)
                 .visible(true)
@@ -710,18 +1017,19 @@ val iconId = intArrayOf(
         batRu2cCircle = map.addCircle(
             CircleOptions()
                 .clickable(true)
-                .center(LatLng(54.61530, 18.82034))
+                .center(LatLng(54.615590, 18.820413))
                 .radius(80.0)
                 .fillColor(0x2133ff33)
                 .visible(true)
                 .strokePattern(patternDotted)
         )
 
+
         dywWLOPCircle = map.addCircle(
             CircleOptions()
                 .clickable(true)
-                .center(LatLng(54.60978, 18.82480))
-                .radius(60.0)
+                .center(LatLng(54.616142, 18.809212))
+                .radius(250.0)
                 .fillColor(0x2133ff33)
                 .visible(true)
                 .strokePattern(patternDotted)
@@ -753,8 +1061,8 @@ val iconId = intArrayOf(
             CircleOptions()
                 .clickable(true)
                 .center(LatLng(54.61476338675549, 18.82229929820359))
-                .radius(60.0)
-                .fillColor(0x2133ff33)
+                .radius(30.0)
+                .fillColor(0x2133ff31)
                 .visible(true)
                 .strokePattern(patternDotted)
         )
@@ -837,6 +1145,11 @@ val iconId = intArrayOf(
                     "position",
                     MediumPathDB.PoiIndex.BATERIA_PLOTHEL.ordinal
                 )
+                batRu2abcCircle.id -> it.putExtra(
+                    "position",
+                    MediumPathDB.PoiIndex.BAT_RU2.ordinal
+                )
+
                 batRu2aCircle.id -> it.putExtra(
                     "position",
                     MediumPathDB.PoiIndex.BAT_RU2.ordinal
@@ -845,10 +1158,13 @@ val iconId = intArrayOf(
                     "position",
                     MediumPathDB.PoiIndex.BAT_RU2.ordinal
                 )
+
+
                 batRu2cCircle.id -> it.putExtra(
                     "position",
                     MediumPathDB.PoiIndex.BAT_RU2.ordinal
                 )
+
                 dywWLOPCircle.id -> it.putExtra(
                     "position",
                     MediumPathDB.PoiIndex.DYW_WLOP.ordinal
@@ -996,7 +1312,7 @@ val iconId = intArrayOf(
 
     companion object {
         private val TAG = MediumMapActivity::class.java.simpleName
-        private const val DEFAULT_ZOOM = 14
+        private const val DEFAULT_ZOOM = 15
         private const val PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1
 
         // Keys for storing activity state.

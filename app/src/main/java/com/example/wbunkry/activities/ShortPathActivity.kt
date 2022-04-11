@@ -589,7 +589,7 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsrec_green))
         )
 
-
+/*
         val shortPolyline = map.addPolyline(
             PolylineOptions()
                 .clickable(true)
@@ -601,7 +601,7 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
                 .pattern(patternDashed)
 
         )
-
+*/
         //Adding circles with markers - one circle is one of the main POIs
         batCircle = map.addCircle(
             CircleOptions()

@@ -21,7 +21,7 @@ class PoiAdapter(private var context: Context, private val listener: OnItemClick
 
 
     override fun onCreateViewHolder(viewGrop: ViewGroup, p1: Int): PoiViewHolder {
-     //create an object form .xml file
+     //create an object from .xml file
         val layoutInflater=context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val poiRow = layoutInflater.inflate(R.layout.poi_row, viewGrop, false)
 

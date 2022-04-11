@@ -40,7 +40,6 @@ class LongSinglePoiActivity : AppCompatActivity() {
         }
 
 
-
         val namePoi = findViewById<TextView>(R.id.namePoiLong)
         namePoi.text=longPoi.name
 
@@ -50,8 +49,5 @@ class LongSinglePoiActivity : AppCompatActivity() {
 
 
     }
-
-
-
 }
 
