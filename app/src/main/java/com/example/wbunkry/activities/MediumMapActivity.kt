@@ -1201,7 +1201,7 @@ val iconId = intArrayOf(
                 .title("Nieczynna latarnia morska Szwedzka Góra")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsrec_green)
                 ))
-
+/*
 
         val mediumPolyline = map.addPolyline(
             PolylineOptions()
@@ -1214,7 +1214,7 @@ val iconId = intArrayOf(
                 .pattern(patternDashed)
 
         )
-
+*/
 
 /*
         val batPolygon = googleMap.addPolygon(
