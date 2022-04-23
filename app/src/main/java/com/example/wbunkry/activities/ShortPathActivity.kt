@@ -105,7 +105,8 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
             R.drawable.vsdot_full_red,
             R.drawable.vsdot_red,
             R.drawable.vsremove_red,
-            R.drawable.srec_green
+            R.drawable.srec_green,
+        R.drawable.vsdot_grey
         )
 
         val iconDescription = arrayOf(
@@ -121,7 +122,8 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
             "Schrony",
             "Działobitnie",
             "Obiekty w ruinie",
-            "INNE OBIEKTY"
+            "INNE OBIEKTY",
+            "OBIEKTY NIEISTNIEJĄCE"
         )
 
         pinArrayList = ArrayList()
@@ -205,9 +207,13 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
      * Manipulates the map when it's available.
      * This callback is triggered when the map is ready to be used.
      */
-    override fun onMapReady(map: GoogleMap) {
-        this.map = map
+     override fun onMapReady(map: GoogleMap) {
+            this.map = map
 
+            map.moveCamera(
+                CameraUpdateFactory
+                    .newLatLngZoom(defaultLocation, ShortPathActivity.DEFAULT_ZOOM.toFloat())
+            )
 
         // Use a custom info window adapter to handle multiple lines of text in the
         // info window contents.
@@ -670,6 +676,8 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
     }
 
 
+
+
     /**
      * Gets the current location of the device, and positions the map's camera.
      */
@@ -686,23 +694,7 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
                     if (task.isSuccessful) {
                         // Set the map's camera position to the current location of the device.
                         lastKnownLocation = task.result
-                        if (lastKnownLocation != null) {
-                            map?.moveCamera(
-                                CameraUpdateFactory.newLatLngZoom(
-                                    LatLng(
-                                        lastKnownLocation!!.latitude,
-                                        lastKnownLocation!!.longitude
-                                    ), DEFAULT_ZOOM.toFloat()
-                                )
-                            )
-                        }
                     } else {
-                        Log.d(TAG, "Current location is null. Using defaults.")
-                        Log.e(TAG, "Exception: %s", task.exception)
-                        map?.moveCamera(
-                            CameraUpdateFactory
-                                .newLatLngZoom(defaultLocation, DEFAULT_ZOOM.toFloat())
-                        )
                         map?.uiSettings?.isMyLocationButtonEnabled = false
                     }
                 }
@@ -711,6 +703,12 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
             Log.e("Exception: %s", e.message, e)
         }
     }
+
+
+
+
+
+
 
 
     /**
@@ -729,6 +727,7 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
             == PackageManager.PERMISSION_GRANTED
         ) {
             locationPermissionGranted = true
+            updateLocationUI()
         } else {
             ActivityCompat.requestPermissions(
                 this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
@@ -737,6 +736,9 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
         }
     }
 
+    /**
+     * Handles the result of the request for location permissions.
+     */
     /**
      * Handles the result of the request for location permissions.
      */
@@ -755,10 +757,10 @@ class ShortPathActivity : AppCompatActivity(), OnMapReadyCallback,
                     grantResults[0] == PackageManager.PERMISSION_GRANTED
                 ) {
                     locationPermissionGranted = true
+                    updateLocationUI()
                 }
             }
         }
-        updateLocationUI()
     }
 
 
