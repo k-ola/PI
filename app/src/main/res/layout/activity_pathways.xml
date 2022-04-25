@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PathwaysActivity">
+    tools:context="com.example.wbunkry.activities.PathwaysActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -21,20 +21,23 @@
         app:srcCompat="@drawable/tlo1b" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/button7"
         android:layout_width="240dp"
         android:layout_height="77dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="-500dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
+        android:alpha="0.5"
+        android:backgroundTint="@color/white"
         android:onClick="openShortPathway"
         android:text="@string/shortPathway_button"
-        android:backgroundTint="@color/white"
-        android:alpha="0.5"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/button6"
@@ -44,13 +47,15 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:onClick="openLongPathway"
+        android:textColor="@color/black"
         android:text="@string/longPathway_button"
         android:backgroundTint="@color/white"
         android:alpha="0.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        android:allowClickWhenDisabled="false"/>
 
     <Button
         android:id="@+id/button5"
@@ -63,10 +68,34 @@
         android:text="@string/midPathway_button"
         android:backgroundTint="@color/white"
         android:alpha="0.5"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="-85dp"
+        android:text="@string/pathways_text"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-light"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <!--
 
     <TextView
         android:id="@+id/textView5"
@@ -101,9 +130,9 @@
         android:textColor="@android:color/white"
         android:textSize="34sp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" /> -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

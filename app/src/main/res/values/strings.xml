@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">W bunkry!</string>
     <string name="name_text">W bunkry!</string>
-    <string name="desc_text">Edycja:\nRejon Umocniony Hel</string>
+    <string name="desc_text">Edycja:\nHelskie fortyfikacje</string>
     <string name="history_button">Historia</string>
     <string name="pathways_button">Trasy</string>
     <string name="exit_button">Wyjdź</string>
@@ -9,15 +9,21 @@
     <string name="shortPathway_button">Krótka</string>
     <string name="midPathway_button">Średnia</string>
     <string name="longPathway_button">Długa</string>
+    <string name="startShort_button">Rozpocznij</string>
+    <string name="poisOnTheWay_text">Obiekty na trasie</string>
     <string name="history_text">Historia</string>
-    <string name="fullHistory_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at ex vel diam aliquam ultrices. Pellentesque elit metus, dignissim at vestibulum id, egestas ut velit. Duis enim nunc, dictum eget consectetur sit amet, mollis in nisl. Suspendisse sollicitudin urna vel diam dictum, scelerisque condimentum ante interdum. Donec ut rutrum mi. Maecenas tincidunt tempus felis vel rutrum. Nulla quis erat ultricies, eleifend nisl eu, rhoncus diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Pellentesque sed ligula tortor. Etiam ipsum ex, consequat sed risus id, volutpat ullamcorper enim.
-Sed sem purus, vestibulum ac libero quis, vulputate sagittis arcu. Duis consequat auctor odio vestibulum efficitur. Aenean eget rhoncus ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum congue nulla id est dignissim sollicitudin. Praesent dui neque, tincidunt eu molestie vitae, scelerisque eu nibh. Vestibulum cursus lectus ut nulla commodo, vel congue erat luctus. Vestibulum convallis sagittis laoreet. Donec dictum sagittis ullamcorper. Cras sit amet dictum nibh, non fringilla nunc. Sed aliquet iaculis sem, in tempor quam facilisis nec.
-
-Donec ac maximus tortor, nec vulputate augue. Donec at blandit dui. Integer id nibh ornare turpis laoreet condimentum. Nullam mattis eleifend ultricies. Aliquam erat volutpat. Nunc non leo sed risus sagittis dignissim. Vivamus blandit magna arcu, eget rhoncus felis elementum malesuada. Sed facilisis ex et efficitur aliquam. Mauris tortor sem, tincidunt sed diam mollis, pharetra efficitur nisl. Nulla luctus sapien metus, non molestie nulla ullamcorper et. Sed quis quam a sapien elementum bibendum. Fusce eleifend commodo neque, blandit ultricies dolor tincidunt eget. Aliquam eleifend ornare tellus quis blandit.
+    <string name="fullHistory_text">Mało który region w Polsce może się poszczycić tak dużą liczbą zabytków militarnych, co Półwysep Helski. Wszystko to za sprawą roli, jaką odgrywał on w XX wieku. Kiedy w 1918 r. Polska po 123 latach odzyskała niepodległość, ustalenia traktatu wersalskiego sprawiły, że Mierzeja Helska znalazła się znów w granicach naszego państwa. Strategiczna lokalizacja Helu, tuż u wejścia Zatoki Gdańskiej, została dość szybko dostrzeżona i przemyślana. W 1931 r. wybudowano Port Wojenny Hel. Wraz z nim w okolicznych lasach pojawiła się podziemna elektrownia, a także liczne schrony torpedowe, minowe i amunicyjne. Był to jednak dopiero pierwszy krok w działaniach zbrojeniowych na Półwyspie Helskim. W 1935 roku zbudowano czterodziałową baterię artylerii nadbrzeżnej kalibru 152,4 mm, ustawioną na cyplu Półwyspu Helskiego, nazywana też „baterią cyplową”. Następnie w 1936 r. na znacznej części Mierzei Helskiej ustanowiono Rejon Umocniony Hel – system fortyfikacji i rozwiniętej infrastruktury wojskowej. Wzniesiono liczne baterie przeciwlotnicze i przeciwdesantowe.  Rozbudowano też sieć kolejową, tak, aby ułatwić transport wojskowy. Poza tym znajdowały się tu magazyny zaopatrzeniowe, pełne broni, różnego rodzaju sprzętu wojskowego i prowiantu. Dostępu do półwyspu od strony lądowej strzegły cztery ciężkie bunkry w rejonie Jastarni ("Sokół", "Sabała", "Saratoga", "Sęp"), przewidziane jako centrum obrony przeciwdesantowej i najsilniejsze umocnienia na Helu. Półwyspem zawładnęli wojskowi – ruch turystyczny, co oczywiste, uległ urzędowym ograniczeniom.
+Po kampanii wrześniowej, bohaterskiej obronie, a następnie kapitulacji Helu 2 października 1939 r. półwysep został przejęty przez wojska III Rzeszy. Niemcy rozumieli doskonale strategiczny potencjał Helu. Wykorzystywali już istniejące obiekty, ale wznieśli także wiele swoich – chcieli rozwinąć umocnienia budowanej w Gdyni bazy morskiej. Powstała wtedy m. in. bateria Schleswig-Holstein, a także kilka stacji radarowych. Po wewnętrznej stronie Mierzei Helskiej powstały zaś torpedownie. Rzeczona bateria Schleswig-Holstein kalibru 406,4 mm jest zabytkiem militarnym klasy światowej - działa o tym kalibrze są największymi na świecie z ustawianych na stałych stanowiskach lądowych.
+Po zakończeniu II wojny światowej półwysep helski ponownie stał się miejscem rozbudowy fortyfikacji. W ramach tworzenia trzech helskich baterii artylerii stałej tzn. 13 BAS, 27 BAS i 3 BAS zbudowano w sumie 40 obiektów militarnych. W okresie Polski Ludowej rozbudowywano także obronę powietrzną oraz powiększano port wojenny. Hel stał się m. in. siedzibą 22 Dywizjonu Rakietowego, 214 Kompanii Radiotechnicznej oraz 64 Dywizjonu Ogniowego. Żołnierze stacjonowali na Półwyspie Helskim aż do czasu restrukturyzacji Wojska Polskiego w 2001 r.
 </string>
     <string name="title_activity_short_map">shortMapActivity</string>
     <string name="title_activity_medium_map">MediumMapActivity</string>
     <string name="title_activity_long_map">LongMapActivity</string>
+    <string name="default_info_title">Default Location</string>
+    <string name="default_info_snippet">No places found, because location permission is disabled.</string>
+    <string name="pick_place">Choose a place</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fade_in">Fade In Tiles</string>
+    <string name="transparency">Transaprency</string>
 </resources>
