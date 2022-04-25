@@ -637,7 +637,8 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
         map.addMarker(
             MarkerOptions()
                 .position(plot21_magazyn)
-                .title("Zniszczony magazyn amunicji 21. Baterii Przeciwlotniczej")
+                .title("Zniszczony magazyn amunicji")
+                .snippet("Zniszczony magazyn amunicji 21. Baterii Przeciwlotniczej")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsremove_yellow))
         )
 
@@ -1213,7 +1214,8 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
         map.addMarker(
             MarkerOptions()
                 .position(ppo3bas)
-                .title("Prawy punkt obserwacji dwubocznej 3 BAS")
+                .title("Prawy punkt obserwacji dwubocznej")
+                .snippet("Prawy punkt obserwacji dwubocznej 3 BAS")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vsdot_full_red)
                 ))
 
@@ -1664,7 +1666,7 @@ class LongMapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnPol
         map.addMarker(
             MarkerOptions()
                 .position(rcn9fw)
-                .title("Radiowe centrum nadawcze 9. Flotylli Obrony Wybrzeża")
+                .title("Radiowe centrum nadawcze 9.FOW")
                 .icon(BitmapDescriptorFactory.fromResource(com.example.wbunkry.R.drawable.vssquare_red)
                 ))
 

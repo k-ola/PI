@@ -68,14 +68,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.wbunkry.activities.PathwaysActivity" />
         </activity>
-        <activity
-            android:name=".activities.ShortMapActivity"
-            android:exported="false"
-            android:label="Trasa krótka">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.wbunkry.activities.PathwaysActivity" />
-        </activity>
+
         <activity
             android:name=".activities.ShortPathActivity"
             android:exported="false"
@@ -104,10 +97,10 @@
         <activity
             android:name=".activities.ShortDetailsActivity"
             android:label="Szczegóły trasy krótkiej"
-            android:parentActivityName=".activities.ShortMapActivity">
+            android:parentActivityName=".activities.ShortPathActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.wbunkry.activities.ShortMapActivity" />
+                android:value="com.example.wbunkry.activities.ShortPathActivity" />
         </activity>
         <activity
             android:name=".activities.SinglePoiActivity"

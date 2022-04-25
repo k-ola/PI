@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.example.wbunkry.R
 import com.example.wbunkry.database.Legend
-import com.example.wbunkry.database.MapLegend
+
 
 
 class PinAdapter (private val context : Activity, private val arrayList : ArrayList<Legend>) : ArrayAdapter<Legend>(context,
